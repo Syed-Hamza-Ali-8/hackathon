@@ -1,26 +1,24 @@
-
 'use client';
-// resopnsive
-import { useState } from 'react'
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X } from 'lucide-react'
+import { useState } from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     { name: "Home", href: "/", active: true },
-    { name: "Menu", href: "/Manu"},
+    { name: "Menu", href: "/Manu" },
     { name: "Blog", href: "/blog" },
     { name: "Pages", href: "/pages" },
     { name: "About", href: "/about" },
     { name: "Shop", href: "/shop" },
     { name: "Contact", href: "/contact" },
-  ]
+  ];
 
   return (
-    <header className="w-full bg-[#0D0D0D] fixed top-0 px-4 sm:px-6 lg:px-[15.62%] py-4 lg:py-7">
+    <header className="w-full bg-[#0D0D0D] fixed top-0 px-4 sm:px-6 md:px-8 lg:px-[15.62%] py-4 lg:py-7">
       <nav className="flex items-center justify-between">
         {/* Logo */}
         <Link
@@ -49,9 +47,8 @@ export default function Navbar() {
             <li key={item.name}>
               <Link
                 href={item.href}
-                className={`text-[16px] leading-6 ${
-                  item.active ? "text-[#FF9F0D] font-bold" : "text-white"
-                } font-inter hover:text-[#FF9F0D] transition-colors`}
+                className={`text-[16px] leading-6 ${item.active ? "text-[#FF9F0D] font-bold" : "text-white"
+                  } font-inter hover:text-[#FF9F0D] transition-colors`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -74,5 +71,5 @@ export default function Navbar() {
         </div>
       </nav>
     </header>
-  )
+  );
 }
