@@ -66,7 +66,7 @@ export default function Aboutus() {
             {/* Card 1 */}
             <div className="p-4 flex flex-col items-center text-center border-2 rounded-lg">
               <Image
-                src="/About-section/student.png"
+                src="/About-section/Student.png"
                 width={60}
                 height={60}
                 alt="Best Chef Icon"
