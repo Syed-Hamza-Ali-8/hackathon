@@ -6,7 +6,7 @@ import { menuItems } from "../../constant/Dessert";
 import { MainCoursItem } from "../../constant/MainCourse";
 import { DrinksItem } from "../../constant/Drink";
 import { ExperienceItem } from "../../constant/Experience";
-import Hero from '@/components/HeroSection/Hero';
+import Hero from '../../components/HeroSection/Hero';
 
 const partners = [
   { name: 'Restaurant', logo: '/Menu-section/bakery1.png' },
