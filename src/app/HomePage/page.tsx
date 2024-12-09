@@ -31,7 +31,7 @@ function HomePage() {
         {/* Image */}
         <div className='mt-[50px] md:mt-0'>
           <Image
-            src="/Home-section/food.png"
+            src="/Home-Section/food.png"
             alt='Hero Image'
             width={700}
             height={500}
@@ -83,10 +83,10 @@ function HomePage() {
 
         {/* Images */}
         <div className="mt-[50px] md:mt-0">
-          <Image src="/Home-section/foodpic1.jpeg" alt="Food Image" width={336} height={536} className="w-full max-w-[336px]" />
+          <Image src="/Home-Section/foodpic1.jpeg" alt="Food Image" width={336} height={536} className="w-full max-w-[336px]" />
           <div className="flex flex-col md:flex-row mt-[16px] md:mt-[0]">
-            <Image src="/Home-section/foodpic2.jpeg" alt="Food Image" width={336} height={536} className="mr-[16px] mt-4 md:mt-0" />
-            <Image src="/Home-section/foodpic3.jpeg" alt="Food Image" width={336} height={536} className="mt-4 md:mt-0" />
+            <Image src="/Home-Section/foodpic2.jpeg" alt="Food Image" width={336} height={536} className="mr-[16px] mt-4 md:mt-0" />
+            <Image src="/Home-Section/foodpic3.jpeg" alt="Food Image" width={336} height={536} className="mt-4 md:mt-0" />
           </div>
         </div>
       </section>
