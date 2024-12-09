@@ -8,15 +8,6 @@ import { DrinksItem } from "../../constant/Drink";
 import { ExperienceItem } from "../../constant/Experience";
 import Hero from '../../components/HeroSection/Hero';
 
-const partners = [
-  { name: 'Restaurant', logo: '/Menu-section/bakery1.png' },
-  { name: 'Bakery', logo: '/Menu-section/bakery2.png' },
-  { name: 'Fork & Spoon', logo: '/Menu-section/bakery3.png' },
-  { name: 'Wolf Coffee', logo: '/Menu-section/bakery4.png' },
-  { name: 'Bistro', logo: '/Menu-section/bakery5.png' },
-  { name: 'Bakery', logo: '/Menu-section/bakery6.png' },
-];
-
 export default function Menu() {
   return (
     <>
