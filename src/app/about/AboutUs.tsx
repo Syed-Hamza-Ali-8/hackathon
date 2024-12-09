@@ -30,11 +30,11 @@ export default function Aboutus() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
               diam pellentesque bibendum non dui volutpat fringilla bibendum.
             </p>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start flex-wrap gap-4">
               <button className="inline-flex text-white bg-orange-400 border-0 py-2 px-3 focus:outline-none rounded text-sm">
                 Show More
               </button>
-              <button className="ml-4 inline-flex text-black border-0 py-2 px-3 focus:outline-none rounded text-sm">
+              <button className="inline-flex text-black border-0 py-2 px-3 focus:outline-none rounded text-sm items-center">
                 <IoPlayOutline className="mr-2 block" /> Watch video
               </button>
             </div>
@@ -62,11 +62,11 @@ export default function Aboutus() {
       {/* Third Section */}
       <section className="text-white body-font">
         <div className="container px-5 py-12 mx-auto">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1 */}
             <div className="p-4 flex flex-col items-center text-center border-2 rounded-lg">
               <Image
-                src="/student.png"
+                src="/About-section/student.png"
                 width={60}
                 height={60}
                 alt="Best Chef Icon"
@@ -96,7 +96,7 @@ export default function Aboutus() {
             {/* Card 3 */}
             <div className="p-4 flex flex-col items-center text-center border-2 rounded-lg">
               <Image
-                src="/man.png"
+                src="/About-section/man.png"
                 width={60}
                 height={60}
                 alt="Clean Environment Icon"
