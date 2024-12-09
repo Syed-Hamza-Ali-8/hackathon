@@ -2,9 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import { FaCheck } from 'react-icons/fa6'
 import FoodCategory from '../foodcatagery/page'
-import foodpic1 from "../../../public/Home-Section/foodpic1.jpeg"
-import foodpic2 from "../../../public/Home-Section/foodpic2.jpeg"
-import foodpic3 from "../../../public/Home-Section/foodpic3.jpeg"
 
 function HomePage() {
   return (
@@ -86,10 +83,10 @@ function HomePage() {
 
         {/* Images */}
         <div className="mt-[50px] md:mt-0">
-          <Image src={foodpic1} alt="Food Image" width={336} height={536} className="w-full max-w-[336px]" />
+          <Image src="/Home-section/foodpic1.jpeg" alt="Food Image" width={336} height={536} className="w-full max-w-[336px]" />
           <div className="flex flex-col md:flex-row mt-[16px] md:mt-[0]">
-            <Image src={foodpic2} alt="Food Image" width={336} height={536} className="mr-[16px] mt-4 md:mt-0" />
-            <Image src={foodpic3} alt="Food Image" width={336} height={536} className="mt-4 md:mt-0" />
+            <Image src="/Home-section/foodpic2.jpeg" alt="Food Image" width={336} height={536} className="mr-[16px] mt-4 md:mt-0" />
+            <Image src="/Home-section/foodpic3.jpeg" alt="Food Image" width={336} height={536} className="mt-4 md:mt-0" />
           </div>
         </div>
       </section>

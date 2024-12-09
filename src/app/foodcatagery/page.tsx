@@ -19,7 +19,7 @@ const FoodCategory = () => {
         </h2>
 
         {/* Grid of food items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 hover:cursor-pointer">
           {items.map((item) => (
             <div key={item.id} className="relative">
               {/* Image of the food item */}
