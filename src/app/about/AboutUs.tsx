@@ -52,7 +52,7 @@ export default function Aboutus() {
           <Image
             className="mt-8 object-cover object-center"
             alt="hero"
-            src="/about.png"
+            src="/About-section/aboutCenter.png"
             width={300}
             height={100}
           />
