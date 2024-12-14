@@ -95,7 +95,7 @@ const FoodCategory = () => {
             <div className="grid grid-cols-1 md:grid-cols-1 gap-4 md:w-1/2 order-2 md:order-1">
               <div className="flex gap-4">
                 <Image
-                  src="/Home-Section/about1.jfif"
+                  src="/Home-Section/about1.png"
                   alt="lacoste"
                   width={160}
                   height={120}
