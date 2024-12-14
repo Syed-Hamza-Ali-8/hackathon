@@ -41,8 +41,8 @@ function HomePage() {
       </section>
 
       {/* About Us Section */}
-      <section className="bg-black px-3 md:px-[135px] flex flex-col md:flex-row md:items-center py-[50px]">
-        {/* Heading */}
+      <section className="bg-black px-3 md:px-[135px] flex flex-col md:flex-row md:items-start py-[50px]">
+        {/* Text Content */}
         <div className="text-white w-full md:w-[50%]">
           <h1 className="text-[24px] md:text-[32px] font-normal text-[#FF9F0D] font whitespace-nowrap font-greatVibes">
             About us
@@ -81,15 +81,43 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Images */}
-        <div className="mt-[50px] md:mt-0">
-          <Image src="/Home-Section/foodpic1.jpeg" alt="Food Image" width={336} height={536} className="w-full max-w-[336px]" />
-          <div className="flex flex-col md:flex-row mt-[16px] md:mt-[0]">
-            <Image src="/Home-Section/foodpic2.jpeg" alt="Food Image" width={336} height={536} className="mr-[16px] mt-4 md:mt-0" />
-            <Image src="/Home-Section/foodpic3.jpeg" alt="Food Image" width={336} height={536} className="mt-4 md:mt-0" />
+        {/* Images Section */}
+        <div className="mt-[50px] md:mt-0 md:w-[50%] grid grid-cols-2 gap-4">
+          {/* Large Image spanning 2 columns */}
+          <div className="col-span-2">
+            <Image
+              src="/Home-Section/foodpic1.jpeg"
+              alt="Food Image 1"
+              width={672}
+              height={400}
+              className="w-full h-[300px] object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Small Image 2 */}
+          <div className="col-span-1">
+            <Image
+              src="/Home-Section/foodpic2.jpeg"
+              alt="Food Image 2"
+              width={336}
+              height={200}
+              className="w-full h-[200px] object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Small Image 3 */}
+          <div className="col-span-1">
+            <Image
+              src="/Home-Section/foodpic3.jpeg"
+              alt="Food Image 3"
+              width={336}
+              height={200}
+              className="w-full h-[200px] object-cover rounded-lg"
+            />
           </div>
         </div>
       </section>
+
 
       {/* Food Category Component */}
       <FoodCategory />
