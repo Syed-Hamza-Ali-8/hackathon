@@ -7,7 +7,6 @@ function HomePage() {
   return (
     <>
       <section className='bg-black px-3 md:px-[135px] flex flex-col md:flex-row md:items-center py-[50px]'>
-        {/* Heading */}
         <div className='text-white w-full md:w-[50%]'>
           <h1 className='text-[24px] md:text-[32px] font-normal text-[#FF9F0D] font whitespace-nowrap'>
             Its Quick & Amusing!
@@ -28,7 +27,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Image */}
         <div className='mt-[50px] md:mt-0'>
           <Image
             src="/Home-Section/food.png"
@@ -42,7 +40,6 @@ function HomePage() {
 
       {/* About Us Section */}
       <section className="bg-black px-3 md:px-[135px] flex flex-col md:flex-row md:items-start py-[50px]">
-        {/* Text Content */}
         <div className="text-white w-full md:w-[50%]">
           <h1 className="text-[24px] md:text-[32px] font-normal text-[#FF9F0D] font whitespace-nowrap font-greatVibes">
             About us
@@ -81,9 +78,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Images Section */}
         <div className="mt-[50px] md:mt-0 md:w-[50%] grid grid-cols-2 gap-4">
-          {/* Large Image spanning 2 columns */}
           <div className="col-span-2">
             <Image
               src="/Home-Section/foodpic1.jpeg"
@@ -94,7 +89,6 @@ function HomePage() {
             />
           </div>
 
-          {/* Small Image 2 */}
           <div className="col-span-1">
             <Image
               src="/Home-Section/foodpic2.jpeg"
@@ -105,7 +99,6 @@ function HomePage() {
             />
           </div>
 
-          {/* Small Image 3 */}
           <div className="col-span-1">
             <Image
               src="/Home-Section/foodpic3.jpeg"
