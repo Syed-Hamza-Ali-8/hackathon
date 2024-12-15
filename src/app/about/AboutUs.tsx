@@ -74,7 +74,7 @@ export default function Aboutus() {
 
             <div className="p-4 flex flex-col items-center text-center border-2 rounded-lg">
               <Image
-                src="/coffee.png"
+                src="/About-section/Coffee.png"
                 width={60}
                 height={60}
                 alt="120 Items Food Icon"
