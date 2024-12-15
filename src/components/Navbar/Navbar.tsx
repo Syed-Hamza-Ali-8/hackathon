@@ -20,7 +20,6 @@ export default function Navbar() {
   return (
     <header className="w-full bg-[#0D0D0D] fixed top-0 px-4 sm:px-6 md:px-8 lg:px-[15.62%] py-4 lg:py-7 z-20">
       <nav className="flex items-center justify-between">
-        {/* Logo */}
         <Link
           href="/"
           className="text-[20px] sm:text-[24px] leading-[32px] font-bold text-white font-helvetica z-10"
@@ -28,7 +27,6 @@ export default function Navbar() {
           Food<span className="text-[#FF9F0D]">tuck</span>
         </Link>
 
-        {/* Mobile Menu Toggle */}
         <button
           className="lg:hidden text-white z-10"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -36,7 +34,6 @@ export default function Navbar() {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Navigation Links */}
         <ul className={`fixed inset-0 bg-[#0D0D0D] flex flex-col items-center justify-center gap-6
           lg:static lg:flex-row lg:bg-transparent lg:gap-[32px] transition-all duration-300 ease-in-out
           ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible lg:opacity-100 lg:visible'}`}>
@@ -54,7 +51,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Icons */}
         <div className="hidden lg:flex items-center gap-4">
           <Link href="/" className="text-white hover:text-[#FF9F0D] transition-colors">
             <Image src="/search.png" alt="search" width={24} height={24} />

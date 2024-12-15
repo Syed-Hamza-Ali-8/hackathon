@@ -6,7 +6,7 @@ import FoodCategory from '../foodcatagery/page'
 function HomePage() {
   return (
     <>
-      <section className='bg-black px-3 md:px-[135px] flex flex-col md:flex-row md:items-center py-[50px]'>
+      <section className='bg-black px-3 md:px-[135px] flex flex-col md:flex-row md:items-center py-[50px] mt-16'>
         <div className='text-white w-full md:w-[50%]'>
           <h1 className='text-[24px] md:text-[32px] font-normal text-[#FF9F0D] font whitespace-nowrap'>
             Its Quick & Amusing!

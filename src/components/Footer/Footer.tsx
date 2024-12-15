@@ -37,8 +37,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Useful Links and Help Section */}
-        <div className="w-full md:col-span-2 flex flex-col lg:flex-row justify-between">
+        <div className="w-full md:col-span-2 flex flex-col lg:flex-row justify-between items-center text-center md:text-left md:items-start">
           <div className="mb-8 lg:mb-0">
             <h3 className="text-xl font-bold mb-4 text-white">Useful Links</h3>
             <ul className="text-sm space-y-2">
@@ -65,7 +64,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Recent Posts Section */}
         <div className="w-full">
           <h3 className="text-xl font-bold mb-4 text-white">Recent Posts</h3>
           {posts.map((post, index) => (
@@ -80,7 +78,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Social Icons Section */}
       <div className="mt-8 flex justify-center space-x-4">
         {socialIcons.map(({ Icon, url, color }, index) => (
           <a

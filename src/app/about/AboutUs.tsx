@@ -4,10 +4,8 @@ import { IoPlayOutline } from "react-icons/io5";
 export default function Aboutus() {
   return (
     <div>
-      {/* First Section: Content and Buttons */}
       <section className="text-white body-font">
         <div className="container mx-auto flex flex-col-reverse md:flex-row px-5 py-12 items-center">
-          {/* Image */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
             <Image
               className="object-cover object-center"
@@ -18,7 +16,6 @@ export default function Aboutus() {
             />
           </div>
 
-          {/* Text Content and Buttons */}
           <div className="w-full md:w-1/2 text-center md:text-left md:pl-8">
             <h1 className="text-sm mb-4 font-medium text-yellow-400 italic">
               About us _____
@@ -42,7 +39,6 @@ export default function Aboutus() {
         </div>
       </section>
 
-      {/* Second Section */}
       <section className="text-white body-font">
         <div className="container mx-auto px-5 py-12 flex flex-col items-center text-center">
           <h1 className="text-black text-2xl font-bold mt-3">Why Choose Us</h1>
@@ -59,11 +55,9 @@ export default function Aboutus() {
         </div>
       </section>
 
-      {/* Third Section */}
       <section className="text-white body-font">
         <div className="container px-5 py-12 mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Card 1 */}
             <div className="p-4 flex flex-col items-center text-center border-2 rounded-lg">
               <Image
                 src="/About-section/Student.png"
@@ -78,7 +72,6 @@ export default function Aboutus() {
               </p>
             </div>
 
-            {/* Card 2 */}
             <div className="p-4 flex flex-col items-center text-center border-2 rounded-lg">
               <Image
                 src="/coffee.png"
@@ -93,7 +86,6 @@ export default function Aboutus() {
               </p>
             </div>
 
-            {/* Card 3 */}
             <div className="p-4 flex flex-col items-center text-center border-2 rounded-lg">
               <Image
                 src="/About-section/man.png"
