@@ -30,6 +30,14 @@ const BlogPage = () => {
     },
   ];
 
+  const filterMenu = [
+    { name: "Chicken Fry", count: 26, imageSrc: "/Blog-section/Chicken-fry.png" },
+    { name: "Burger Food", count: 46, imageSrc: "/Blog-section/Burger-food.png" },
+    { name: "Pizza", count: 16, imageSrc: "/Blog-section/Pizza2.png" },
+    { name: "Fresh Fruits", count: 36, imageSrc: "/Blog-section/Fresh-fruits.png" },
+    { name: "Vegetables", count: 16, imageSrc: "/Blog-section/Vegetables.png" },
+  ];
+
   return (
     <div className="flex flex-col w-full">
       <Hero />
@@ -133,10 +141,10 @@ const BlogPage = () => {
               <div className="border-white border-2 bg-slate-100 p-4">
                 <h6 className="text-[#333333] font-bold mb-2">Filter By Menu</h6>
                 <div className="space-y-3">
-                  {[{ name: "Chicken Fry", count: 26 }, { name: "Burger Food", count: 46 }, { name: "Pizza", count: 16 }, { name: "Fresh Fruits", count: 36 }, { name: "Vegetables", count: 16 }].map((menu, index) => (
+                  {filterMenu.map((menu, index) => (
                     <div key={index} className="flex justify-between items-center">
                       <Image
-                        src={`/Blog-section/${menu.name.replace(' ', '-')}.png`}
+                        src={menu.imageSrc}
                         alt={menu.name}
                         height={91}
                         width={99}
@@ -146,7 +154,7 @@ const BlogPage = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div>;
 
               <div className="border-white border-2 bg-slate-100 p-4">
                 <h6 className="text-[#333333] font-bold mb-2">Popular Tags</h6>
