@@ -10,12 +10,9 @@ const Shop = () => {
     <>
       <Hero />
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 mt-32">
-        {/* Product Section */}
         <div className="flex flex-col md:flex-row gap-8 mt-12">
-          {/* Left: Images */}
           <div className="flex flex-col">
             <div className="relative">
-              {/* Main Image */}
               <Image
                 className="rounded-[6px] h-[300px] sm:h-[400px] hover:cursor-pointer"
                 src="/Shop-section/Rectangle 8883.png"
@@ -23,13 +20,11 @@ const Shop = () => {
                 height={300}
                 width={400}
               />
-              {/* In Stock Badge */}
               <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-[#FF9F0D] text-white text-[12px] font-normal px-2 py-1 rounded-[6px]">
                 In stock
               </div>
             </div>
 
-            {/* Thumbnails */}
             <div className="flex justify-center gap-4 mt-4">
               <Image
                 className="rounded-[6px] hover:cursor-pointer"
@@ -55,7 +50,6 @@ const Shop = () => {
             </div>
           </div>
 
-          {/* Right: Product Details */}
           <div className="flex-1">
             <h2 className="text-[35px] font-bold">Yummy Chicken Chup</h2>
             <p className="text-gray-500 mt-4">
@@ -64,13 +58,11 @@ const Shop = () => {
 
             <h4 className="text-[28px] font-bold mt-4">$54.00</h4>
 
-            {/* Rating */}
             <div className="flex items-center mt-2">
               <Image src="/Shop-section/Star.png" alt="rating" height={20} width={100} />
               <span className="ml-2 text-gray-500 text-sm">5.0 Rating | 22 Reviews</span>
             </div>
 
-            {/* Buttons */}
             <div className="flex gap-4 mt-6">
               <button className="bg-[#FF9F0D] text-white px-6 py-2 rounded-lg hover:bg-[#e67e22]">
                 + Add to Cart
@@ -80,11 +72,9 @@ const Shop = () => {
               </button>
             </div>
 
-            {/* Category */}
             <p className="text-gray-500 mt-4">Category: <span className="font-bold">Pizza</span></p>
             <p className="text-gray-500">Tag: <span className="font-bold">Our Shop</span></p>
 
-            {/* Share Icons */}
             <div className="flex gap-2 mt-4">
               <Image src="/Shop-section/Facebook.png" alt="Share" height={24} width={24} />
               <Image src="/Shop-section/Instagram.png" alt="Share" height={24} width={24} />
@@ -93,7 +83,6 @@ const Shop = () => {
           </div>
         </div>
 
-        {/* Tabs: Description and Reviews */}
         <div className="mt-12 border-t">
           <div className="flex gap-4 mt-4">
             <button
@@ -112,7 +101,6 @@ const Shop = () => {
             </button>
           </div>
 
-          {/* Tab Content */}
           <div className="mt-4 text-gray-600">
             {activeTab === "Description" && (
               <>
@@ -132,32 +120,38 @@ const Shop = () => {
           </div>
         </div>
 
-        {/* Similar Products */}
         <div className="mt-16">
           <h3 className="text-[28px] font-bold">Similar Products</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-4 justify-items-center">
-            <div className="text-center">
-              <Image src="/Shop-section/Fresh Lime.png" alt="Product 1" height={150} width={200} />
-              <p className="mt-2">Fresh Lime</p>
-              <p className="font-bold">$22.00</p>
-            </div>
-            <div className="text-center">
-              <Image src="/Shop-section/Fresh Lime 2.png" alt="Product 2" height={150} width={200} />
-              <p className="mt-2">Chocolate Muffin</p>
-              <p className="font-bold">$18.00</p>
-            </div>
-            <div className="text-center">
-              <Image src="/Shop-section/Fresh Lime 3.png" alt="Product 3" height={150} width={200} />
-              <p className="mt-2">Burger</p>
-              <p className="font-bold">$35.00</p>
-            </div>
-            <div className="text-center">
-              <Image src="/Shop-section/Fresh Lime.png" alt="Product 4" height={150} width={200} />
-              <p className="mt-2">Fresh Lime</p>
-              <p className="font-bold">$22.00</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 justify-items-center cursor-pointer">
+            {[
+              { name: "Fresh Lime", price: "$22.00", image: "/Shop-section/Fresh Lime.png" },
+              { name: "Chocolate Muffin", price: "$18.00", image: "/Shop-section/Fresh Lime 2.png" },
+              { name: "Burger", price: "$35.00", image: "/Shop-section/Fresh Lime 3.png" },
+              { name: "Cheese Butter", price: "$22.00", image: "/Shop-section/Cheese-butter.png" },
+              { name: "Country Burger", price: "$30.00", image: "/Shop-section/Country-burger.png" },
+              { name: "Drinks", price: "$20.00", image: "/Shop-section/Drinks.png.png" },
+              { name: "Pizza", price: "$35.00", image: "/Shop-section/Pizza.png.png" },
+              { name: "Sandwiches", price: "$18.00", image: "/Shop-section/Sandwitches.png" },
+              { name: "Chicken Chup", price: "$25.00", image: "/Shop-section/Chicken-chup.png" },
+            ].map((product, index) => (
+              <div
+                key={index}
+                className="text-center w-full sm:w-auto"
+              >
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  height={200}
+                  width={300}
+                  className="object-cover w-full"
+                />
+                <p className="mt-2">{product.name}</p>
+                <p className="font-bold">{product.price}</p>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </>
   );
