@@ -6,7 +6,6 @@ export default function StarterMenu() {
   return (
     <section className="w-full mx-auto mt-[120px] px-4 sm:px-6 md:px-8 lg:px-12">
       <div className="container mx-auto py-16 flex flex-col md:flex-row gap-12">
-        {/* Image Section */}
         <div className="w-full mb-8 md:mb-0 flex justify-center">
           <img
             src="/menu.png"
@@ -17,7 +16,6 @@ export default function StarterMenu() {
           />
         </div>
 
-        {/* Menu Content */}
         <div className="w-full md:w-1/2 md:pl-8">
           <div className="flex flex-col mb-8">
             <Coffee className="ml-2 text-[#FF9F0D]" size={24} />

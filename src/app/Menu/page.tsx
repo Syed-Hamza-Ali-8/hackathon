@@ -13,7 +13,6 @@ export default function Menu() {
     <>
       <Hero />
       <main className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Course Section */}
         <section className="w-full mx-auto mt-16 lg:mt-32">
           <div className="container mx-auto py-16 flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 lg:pl-8">
@@ -50,7 +49,6 @@ export default function Menu() {
           </div>
         </section>
 
-        {/* Dessert Section */}
         <section className="w-full mx-auto mt-16 lg:mt-32">
           <div className="container mx-auto py-10 sm:py-16 flex flex-col md:flex-row gap-8 md:gap-[112px]">
             <div className="w-full md:w-[448px] mb-6 md:mb-0">
@@ -83,7 +81,6 @@ export default function Menu() {
           </div>
         </section>
 
-        {/* Drink Section */}
         <section className="w-full mx-auto mt-16 lg:mt-32">
           <div className="container mx-auto py-10 sm:py-16 flex flex-col md:flex-row gap-8 md:gap-[112px]">
             <div className="md:w-1/2 md:pl-8">
@@ -120,7 +117,6 @@ export default function Menu() {
           </div>
         </section>
 
-        {/* Experience Section */}
         <section className="relative py-10 sm:py-16 lg:py-20 bg-cover bg-center bg-[url('/menu.png')]">
           <div className="absolute inset-0 bg-black bg-opacity-85"></div>
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
