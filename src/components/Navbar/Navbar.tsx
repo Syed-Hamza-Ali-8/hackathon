@@ -55,7 +55,7 @@ export default function Navbar() {
           <Link href="/" className="text-white hover:text-[#FF9F0D] transition-colors">
             <Image src="/search.png" alt="search" width={24} height={24} />
           </Link>
-          <Link href="/" className="text-white hover:text-[#FF9F0D] transition-colors">
+          <Link href="/signup" className="text-white hover:text-[#FF9F0D] transition-colors">
             <Image src="/User.png" alt="user" width={24} height={24} />
           </Link>
           <Link href="/" className="text-white hover:text-[#FF9F0D] transition-colors">

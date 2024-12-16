@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Hero from "./Hero"
 import React from "react"
-// import google from "../../../public/google.png"
-// import apple from "../../../public/apple.png"
+import google from "../../../public/google.png"
+import apple from "../../../public/apple.png"
+import Image from "next/image";
 
 export default function SignUpPage() {
   return (
@@ -11,7 +12,7 @@ export default function SignUpPage() {
 
       <div className="min-h-screen bg-white">  
       {/* Signup Form */}
-      <section className="py-16">
+      <section className="py-16 mt-32">
         <div className="container mx-auto max-w-md bg-white shadow-lg rounded-md p-8">
           <h3 className="text-2xl font-bold mb-6 text-center">Sign Up</h3>
           <form>
@@ -55,14 +56,14 @@ export default function SignUpPage() {
           </form>
           <div className="text-center mt-8">
             <p>or</p>
-            {/* <button className="w-full bg-gray-100 border text-black py-2 rounded mt-2 flex items-center justify-center">
+            <button className="w-full bg-gray-100 border text-black py-2 rounded mt-2 flex items-center justify-center">
               <Image src={google} alt="Google" className="w-[20px] h-[20px] left-[16px] mr-2" />
               Sign up with Google
             </button>
             <button className="w-full bg-gray-100 border text-black py-2 rounded mt-2 flex items-center justify-center">
               <Image src={apple} alt="Apple" className="w-[24px] h-[24px] left-[16px] mr-2" />
               Sign up with Apple
-            </button> */}
+            </button>
           </div>
         </div>
       </section>
