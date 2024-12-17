@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from "./Hero";
 import Image from 'next/image';
-import { FaTwitter, FaYoutube, FaPinterest, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaTwitter, FaPinterest, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Pages = () => {
 
@@ -174,89 +174,42 @@ const Pages = () => {
 
             <div className="border-white border-2 bg-slate-100 p-4 mb-8">
               <h6 className="text-[#333333] font-bold mb-2">Recent Post</h6>
-              {["Burger", "Dessert", "Pasta", "Smoothie"].map((item, index) => (
-                <div key={index} className="mb-4">
-                  <Image
-                    src={`/Blog-section/${item}.png`}
-                    alt={item}
-                    height={91}
-                    width={99}
-                  />
-                  <p className="text-[#828282]">June 22, 2020</p>
-                  <p className="text-[#4F4F4F]">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr...
-                  </p>
+              {["Burger", "Dessert", "Pasta", "Fruits", "Vegetable"].map((item, index) => (
+                <div key={index} className="w-full mb-4">
+                  <div className="w-full aspect-square relative">
+                    <Image
+                      src={`/Blog-section/${item}.png`}
+                      alt={item}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="text-[#828282] text-sm">{item}</div>
                 </div>
               ))}
             </div>
 
             <div className="border-white border-2 bg-slate-100 p-4 mb-8">
-              <h6 className="text-[#333333] font-bold mb-2">Filter By Menu</h6>
-              <div className="space-y-3">
-                {filterMenu.map((menu, index) => (
-                  <div key={index} className="flex justify-between items-center mb-4">
+              <h6 className="text-[#333333] font-bold mb-2">Filter by Menu</h6>
+              {filterMenu.map((item, index) => (
+                <div key={index} className="w-full mb-4">
+                  <div className="w-full aspect-square relative">
                     <Image
-                      src={menu.imageSrc}
-                      alt={menu.name}
-                      height={91}
-                      width={99}
-                    />
-                    <p className="text-[#333333]">{menu.name}</p>
-                    <p className="text-[#4F4F4F]">{menu.count}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-white border-2 bg-slate-100 p-4">
-              <h6 className="text-[#333333] font-bold mb-2">Popular Tags</h6>
-              <div className="flex flex-wrap gap-2">
-                {["Sandwich", "Tikka", "BBQ", "Resturant", "Chicken Sharma", "Health", "Fastfood", "Food", "Pizza", "Burger", "Chicken"].map((tag, index) => (
-                  <p key={index} className="text-[#4F4F4F] border border-gray-300 py-1 px-3 rounded-md">
-                    {tag}
-                  </p>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-white border-2 bg-slate-100 p-4">
-              <h6 className="text-[#333333] font-bold mb-2">Photo Gallery</h6>
-              <div className="grid grid-cols-3 gap-4">
-                {["Pizza", "Burger", "Curry", "BBQ", "Nuggets", "Egg-fries"].map((item, index) => (
-                  <div key={index} className="w-full aspect-square relative">
-                    <Image
-                      src={`/Blog-section/${item}.png`}
-                      alt={item}
-                      layout="fill"
+                      src={item.imageSrc}
+                      alt={item.name}
+                      fill
                       className="object-cover"
                     />
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-white border-2 bg-slate-100 p-4 mb-8">
-              <h6 className="text-[#333333] flex justify-center font-bold mb-2">Follow Us</h6>
-              <div className="flex gap-4 justify-center">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <FaTwitter size={24} className="text-blue-500" />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram size={24} className="text-pink-600" />
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook size={24} className="text-blue-600" />
-                </a>
-                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
-                  <FaPinterest size={24} className="text-red-600" />
-                </a>
-              </div>
+                  <div className="text-[#828282] text-sm">{item.name} ({item.count})</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Pages;
