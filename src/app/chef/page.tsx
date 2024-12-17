@@ -21,7 +21,7 @@ const Chefs = () => {
   return (
     <div>
       <Hero />
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6 mt-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6 mt-24">
         {chefs.map((chef) => (
           <div key={chef.id} className="text-center">
             <div className="relative w-[312px] h-[379px] mx-auto overflow-hidden rounded-lg">

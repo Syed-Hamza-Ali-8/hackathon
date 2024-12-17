@@ -1,8 +1,7 @@
-'use client';
+'use client'
 import { useState } from 'react';
 import Link from "next/link";
-import Image from "next/image";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search, User, ShoppingBag } from 'lucide-react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +18,19 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-[#0D0D0D] fixed top-0 px-4 sm:px-6 md:px-8 lg:px-[15.62%] py-4 lg:py-7 z-20">
-      <nav className="flex items-center justify-between">
+      <nav className="flex items-center justify-between lg:justify-between">
+        <div className="lg:hidden flex items-center gap-4">
+          <Link href="/" className="text-white hover:text-[#FF9F0D] transition-colors">
+            <Search size={20} />
+          </Link>
+          <Link href="/signup" className="text-white hover:text-[#FF9F0D] transition-colors">
+            <User size={20} />
+          </Link>
+          <Link href="/checkOut" className="text-white hover:text-[#FF9F0D] transition-colors">
+            <ShoppingBag size={20} />
+          </Link>
+        </div>
+
         <Link
           href="/"
           className="text-[20px] sm:text-[24px] leading-[32px] font-bold text-white font-helvetica z-10"
@@ -34,15 +45,44 @@ export default function Navbar() {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <ul className={`fixed inset-0 bg-[#0D0D0D] flex flex-col items-center justify-center gap-6
-          lg:static lg:flex-row lg:bg-transparent lg:gap-[32px] transition-all duration-300 ease-in-out
-          ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible lg:opacity-100 lg:visible'}`}>
+        <div className="hidden lg:flex items-center justify-center flex-grow">
+          <ul className="flex gap-6">
+            {menuItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className={`text-[16px] leading-6 ${item.active ? "text-[#FF9F0D] font-bold" : "text-white"}`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="hidden lg:flex items-center gap-4">
+          <Link href="/" className="text-white hover:text-[#FF9F0D] transition-colors">
+            <Search size={24} />
+          </Link>
+          <Link href="/signup" className="text-white hover:text-[#FF9F0D] transition-colors">
+            <User size={24} />
+          </Link>
+          <Link href="/checkOut" className="text-white hover:text-[#FF9F0D] transition-colors">
+            <ShoppingBag size={24} />
+          </Link>
+        </div>
+      </nav>
+
+      <div
+        className={`lg:hidden fixed top-0 right-0 w-3/4 h-full bg-[#0D0D0D] flex flex-col items-center justify-center gap-6
+        transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        <ul className="flex flex-col gap-6">
           {menuItems.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.href}
-                className={`text-[16px] leading-6 ${item.active ? "text-[#FF9F0D] font-bold" : "text-white"}
-                  font-inter hover:text-[#FF9F0D] transition-colors`}
+                className={`text-[16px] leading-6 ${item.active ? "text-[#FF9F0D] font-bold" : "text-white"}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -50,19 +90,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        <div className="hidden lg:flex items-center gap-4">
-          <Link href="/" className="text-white hover:text-[#FF9F0D] transition-colors">
-            <Image src="/search.png" alt="search" width={24} height={24} />
-          </Link>
-          <Link href="/signup" className="text-white hover:text-[#FF9F0D] transition-colors">
-            <Image src="/User.png" alt="user" width={24} height={24} />
-          </Link>
-          <Link href="/checkOut" className="text-white hover:text-[#FF9F0D] transition-colors">
-            <Image src="/Tote.png" alt="cart" width={24} height={24} />
-          </Link>
-        </div>
-      </nav>
+      </div>
     </header>
   );
 }
