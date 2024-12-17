@@ -124,9 +124,9 @@ const Shop = () => {
           <h3 className="text-[28px] font-bold">Similar Products</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 justify-items-center cursor-pointer">
             {[
-              { name: "Fresh Lime", price: "$22.00", image: "/Shop-section/Fresh Lime.png" },
-              { name: "Chocolate Muffin", price: "$18.00", image: "/Shop-section/Fresh Lime 2.png" },
-              { name: "Burger", price: "$35.00", image: "/Shop-section/Fresh Lime 3.png" },
+              { name: "Fresh Lime", price: "$22.00", image: "/Shop-section/Fresh-lime.png" },
+              { name: "Chocolate Muffin", price: "$18.00", image: "/Shop-section/Muffin.png" },
+              { name: "Burger", price: "$35.00", image: "/Shop-section/Burger.png" },
               { name: "Cheese Butter", price: "$22.00", image: "/Shop-section/Cheese-butter.png" },
               { name: "Country Burger", price: "$30.00", image: "/Shop-section/Country-burger.png" },
               { name: "Drinks", price: "$20.00", image: "/Shop-section/Drinks.png.png" },
