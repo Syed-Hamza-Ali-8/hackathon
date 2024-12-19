@@ -178,7 +178,7 @@ function Checkout() {
             </div>
           </div>
 
-          <div className="space-y-4 mt-10 ml-10">
+          <div className="space-y-4 mt-10 ml-10 mr-10">
             <p className='text-[#4F4F4F] font-normal flex justify-between'>
               Sub-total <span>130$</span>
             </p>
